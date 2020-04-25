@@ -23,8 +23,9 @@ public class UsedProduct extends Product
 		return name
 				+ "$ "
 				+ String.format("%.2f", price)
-				+ " (Manufacture date: )"
-				+ sdf.format(manufactureDate);
+				+ " (Manufacture date: "
+				+ sdf.format(manufactureDate)
+				+ ")";
 	}
 	
 }

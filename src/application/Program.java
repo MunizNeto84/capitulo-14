@@ -47,23 +47,19 @@ public class Program
 			System.out.print("Common, used or imported (c/u/i)? ");
 			char ch = sc.next().charAt(0);
 			
+			System.out.print("Name: ");
+			sc.nextLine();
+			String name = sc.nextLine();
+			System.out.print("Price: ");
+			double price = sc.nextDouble();
+			
 			if (ch == 'c')
 			{
-				System.out.print("Name: ");
-				sc.nextLine();
-				String name = sc.nextLine();
-				System.out.print("Price: ");
-				double price = sc.nextDouble();
 				prod.add(new Product(name, price));
 			}
 			
 			if (ch == 'u')
 			{
-				System.out.print("Name: ");
-				sc.nextLine();
-				String name = sc.nextLine();
-				System.out.print("Price: ");
-				double price = sc.nextDouble();
 				System.out.print("Manufacture date (DD/MM/YYYY): ");
 				Date manufactureDate = sdf.parse(sc.next());
 				prod.add(new UsedProduct(name, price, manufactureDate));
@@ -71,15 +67,11 @@ public class Program
 			
 			if (ch == 'i')
 			{
-				System.out.print("Name: ");
-				sc.nextLine();
-				String name = sc.nextLine();
-				System.out.print("Price: ");
-				double price = sc.nextDouble();
 				System.out.print("Customs fee: ");
 				double custormsFree = sc.nextDouble();
 				prod.add(new ImportedProduct(name, price, custormsFree));
 			}
+			
 			System.out.println();
 		}
 		
